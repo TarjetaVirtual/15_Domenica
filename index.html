@@ -1635,6 +1635,38 @@
     margin: 6px auto 0;
     background: linear-gradient(to right, transparent, #b7a17b, transparent);
 }
+
+.carrusel-inicio {
+    position: relative;
+    width: 100%;
+    max-width: 450px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.foto-carrusel-inicio {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 10px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+/* Mantiene el espacio y tamaño original */
+.foto-carrusel-inicio:first-child {
+    position: relative;
+}
+
+.foto-carrusel-inicio.activa {
+    opacity: 1;
+}
     </style>
 </head>
 
@@ -2293,10 +2325,15 @@ if (cantidad) {
         })();
 
 
-/* ---------- CARRUSEL AUTOMÁTICO INICIAL ---------- */
 const fotosInicio = document.querySelectorAll('.foto-carrusel-inicio');
 
 let indiceFotoInicio = 0;
+
+// Cargar las dos fotos antes de iniciar el cambio
+fotosInicio.forEach(foto => {
+    const imagen = new Image();
+    imagen.src = foto.src;
+});
 
 if (fotosInicio.length > 1) {
     setInterval(() => {
@@ -2305,7 +2342,7 @@ if (fotosInicio.length > 1) {
         indiceFotoInicio = (indiceFotoInicio + 1) % fotosInicio.length;
 
         fotosInicio[indiceFotoInicio].classList.add('activa');
-    }, 3000);
+    }, 4000);
 }
 var regalo = (urlDatos.get('regalo') || '').toLowerCase().trim();
 if (regalo === 's') {
