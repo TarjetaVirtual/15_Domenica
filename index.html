@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;400;600&family=Tenor+Sans&family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@200;400;600&family=Tenor+Sans&family=Alex+Brush&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Playfair+Display:ital,wght@0,600;0,700;1,500;1,600&family=Cinzel:wght@500;700&display=swap"
         rel="stylesheet">
 
     <style>
@@ -395,6 +395,40 @@
             background-image: url('fondo2.jpg');
         }
 
+        /* Mensaje de los padres + versículo (tipografía más llamativa) */
+        .mensaje-padres {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+            font-size: 1.2rem;
+            line-height: 1.75;
+            color: var(--azul-profundo);
+            margin: 0 0 28px;
+            text-shadow: 0 1px 0 rgba(255, 255, 255, .6);
+        }
+
+        .versiculo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 500;
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #5d4936;
+            margin: 0 0 12px;
+        }
+
+        .versiculo-ref {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: .85rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--dorado);
+            margin: 0;
+        }
+
         .decoracion-corazones {
             display: flex;
             justify-content: center;
@@ -631,15 +665,30 @@
             color: var(--azul-tinta);
         }
 
+        /* Nota de puntualidad destacada */
         .nota-protocolo {
             margin: 34px auto 0;
             padding: 0 12px;
             max-width: 460px;
             text-align: center;
-            font-size: .8rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
             font-style: italic;
-            line-height: 1.5;
-            color: #4b5d74;
+            font-weight: 500;
+            line-height: 1.6;
+            color: var(--azul-tinta);
+        }
+
+        .nota-protocolo strong {
+            display: block;
+            margin-top: 4px;
+            font-family: 'Playfair Display', serif;
+            font-style: normal;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--azul-profundo);
         }
 
         /* ============ REGALOS Y DRESS CODE ============ */
@@ -708,6 +757,30 @@
         .tarjeta-regalo-cafe p.dato {
             font-weight: 800;
             margin: 6px 0;
+        }
+
+        /* Lluvia de sobres */
+        .lluvia-sobres {
+            width: 100%;
+            margin-top: 34px;
+            padding-top: 26px;
+            border-top: 1px solid rgba(255, 255, 255, .45);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .lluvia-sobres h2 {
+            font-family: 'Alex Brush', cursive;
+            font-size: 2.2rem;
+            font-weight: 400;
+            color: #ffffff;
+            margin: 0 0 14px;
+        }
+
+        .lluvia-sobres img {
+            width: 110px;
+            margin: 0 auto 14px;
         }
 
         .tarjeta-dress-blanca {
@@ -819,6 +892,10 @@
             height: 28px;
             border-radius: 50%;
             box-shadow: 0 1px 3px rgba(0, 0, 0, .12);
+        }
+
+        .color-circle.borde {
+            border: 1px solid var(--azul-linea);
         }
 
         .dress-nota {
@@ -1572,8 +1649,6 @@
             }
         }
 
-     
-
         @keyframes aparecer {
             from {
                 opacity: 0;
@@ -1582,83 +1657,83 @@
                 opacity: 1;
             }
         }
+
         .titulo-xv {
-    font-family: 'Great Vibes', cursive;
-    font-size: clamp(2.4rem, 11vw, 3.3rem);
-    margin: 0 0 4px;
-    font-weight: normal;
-    line-height: 1.5;
-    padding: 12px 10px 6px;
-    letter-spacing: 1px;
-    text-align: center;
-    overflow: visible;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.4rem, 11vw, 3.3rem);
+            margin: 0 0 4px;
+            font-weight: normal;
+            line-height: 1.5;
+            padding: 12px 10px 6px;
+            letter-spacing: 1px;
+            text-align: center;
+            overflow: visible;
 
-    /* Degradado dorado elegante */
-    background: linear-gradient(135deg, #8d7a64 0%, #d9c291 35%, #b7a17b 60%, #8d7a64 100%);
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: #b7a17b; /* respaldo */
+            /* Degradado dorado elegante */
+            background: linear-gradient(135deg, #8d7a64 0%, #d9c291 35%, #b7a17b 60%, #8d7a64 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            color: #b7a17b; /* respaldo */
 
-    /* Sombra suave */
-    filter: drop-shadow(0 2px 3px rgba(20, 43, 74, .18));
+            /* Sombra suave */
+            filter: drop-shadow(0 2px 3px rgba(20, 43, 74, .18));
 
-    animation: fadeInCursive 1.5s ease-out forwards;
-    opacity: 0;
-}
+            animation: fadeInCursive 1.5s ease-out forwards;
+            opacity: 0;
+        }
 
-/* Línea decorativa debajo del título */
-.titulo-xv::after {
-    content: "";
-    display: block;
-    width: 70px;
-    height: 1px;
-    margin: 6px auto 0;
-    background: linear-gradient(to right, transparent, #b7a17b, transparent);
-}
+        /* Línea decorativa debajo del título */
+        .titulo-xv::after {
+            content: "";
+            display: block;
+            width: 70px;
+            height: 1px;
+            margin: 6px auto 0;
+            background: linear-gradient(to right, transparent, #b7a17b, transparent);
+        }
 
+        /* Carrusel inicial estable */
+        .carrusel-inicio {
+            position: relative;
+            width: 100%;
+            max-width: 450px;
+            margin: auto;
+            overflow: hidden;
+            isolation: isolate;
+        }
 
-/* Carrusel inicial estable */
-.carrusel-inicio {
-    position: relative;
-    width: 100%;
-    max-width: 450px;
-    margin: auto;
-    overflow: hidden;
-    isolation: isolate;
-}
+        .foto-carrusel-inicio {
+            display: block !important;
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            object-fit: cover;
+            transition: opacity .8s ease-in-out;
+            animation: none !important;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+        }
 
-.foto-carrusel-inicio {
-    display: block !important;
-    width: 100%;
-    height: auto;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: opacity .8s ease-in-out;
-    animation: none !important;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-}
+        .foto-carrusel-inicio:first-child {
+            position: relative;
+        }
 
-.foto-carrusel-inicio:first-child {
-    position: relative;
-}
+        .foto-carrusel-inicio:not(:first-child) {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+        }
 
-.foto-carrusel-inicio:not(:first-child) {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-}
+        .foto-carrusel-inicio:not(.activa) {
+            opacity: 0;
+            pointer-events: none;
+        }
 
-.foto-carrusel-inicio:not(.activa) {
-    opacity: 0;
-    pointer-events: none;
-}
-
-.foto-carrusel-inicio.activa {
-    opacity: 1;
-}
+        .foto-carrusel-inicio.activa {
+            opacity: 1;
+        }
     </style>
 </head>
 
@@ -1666,19 +1741,13 @@
 
     <!-- PORTADA -->
     <div id="preloader">
-        <img src="2.jpg" alt="Portada" class="preloader-full">
+        <img src="2.png" alt="Portada" class="preloader-full">
         <div class="texto-tocar">Abrir Invitación</div>
     </div>
-<section class="foto-inicio seccion">
-    <div class="carrusel-inicio">
-        <img src="WhatsApp Image 2026-11-06 at 10.41.36.jpeg"
-             class="foto-carrusel-inicio activa" alt="Doménica Erazo">
 
-        <img src="WhatsApp Image 2026-11-06 at 10.43.24.jpeg"
-             class="foto-carrusel-inicio" alt="Doménica Erazo">
-    </div>
-</section>
-
+    <section class="seccion aparecer">
+        <img src="WhatsApp Image 2026-11-06 at 10.41.36.jpeg" alt="Doménica Erazo">
+    </section>
     <audio id="musica-boda" loop>
         <source src="musica.mp3" type="audio/mpeg">
     </audio>
@@ -1696,7 +1765,7 @@
     <div class="escena-invitacion">
         <div class="sobre-container">
             <div class="iniciales-dd">D E</div>
-            <img src="sobre.jpg" class="sobre-img" alt="Sobre">
+            <img src="sobre.jpeg" class="sobre-img" alt="Sobre">
             <img src="sello.png" class="sello-lacre" alt="Sello">
             <div class="tarjeta-blanca">
                 <p class="lema">TE INVITO A CELEBRAR MIS XV AÑOS</p>
@@ -1711,7 +1780,9 @@
             </div>
         </div>
     </div>
-
+    <section class="seccion aparecer">
+        <img src="WhatsApp Image 2026-11-06 at 10.43.24.jpeg" alt="Doménica Erazo">
+    </section>
     <!-- FRASE -->
     <div class="seccion-padres seccion-frase reveal" style="padding: 60px 30px; text-align: center;">
         <div class="divisor-elegante" style="margin: 0 auto 25px; background-color: #ffffff;"></div>
@@ -1719,9 +1790,9 @@
             <div class="decoracion-corazones" aria-hidden="true">
                 <span>♡</span><span>♡</span><span>♡</span>
             </div>
-          <p style="font-family: 'Bodoni Moda', serif; font-size: 1.18rem; font-style: italic; line-height: 1.8; color: #ffffff; margin-bottom: 25px;">
-    “Uno de los días más importantes de mi vida ha llegado, quiero que seas parte de este momento"
-</p>
+            <p style="font-family: 'Bodoni Moda', serif; font-size: 1.18rem; font-style: italic; line-height: 1.8; color: #ffffff; margin-bottom: 25px;">
+                “Uno de los días más importantes de mi vida ha llegado, quiero que seas parte de este momento"
+            </p>
             <div class="decoracion-corazones" aria-hidden="true">
                 <span>♡</span><span>♡</span><span>♡</span>
             </div>
@@ -1729,11 +1800,27 @@
         <div class="divisor-elegante" style="margin: 25px auto 0; background-color: #8d7a64;"></div>
     </div>
 
- <section class="seccion aparecer">
+    <section class="seccion aparecer">
         <img src="foto4.jpeg" alt="Doménica Erazo">
     </section>
 
-    <!-- PADRES -->
+    <!-- NUEVO: MENSAJE DE LOS PADRES + VERSÍCULO (tarjeta aparte) -->
+    <div class="seccion-padres reveal" style="padding: 60px 30px; text-align: center;">
+        <div style="max-width: 460px; margin: 0 auto;">
+            <p class="mensaje-padres">
+                Hija amada, antes de conocerte ya estabas en nuestras oraciones. Dios, en su infinito amor, nos concedió el privilegio de tenerte en nuestras vidas y hoy, al verte cumplir tus quince años, nuestro corazón se llena de gratitud.
+            </p>
+            <div class="divisor-elegante" style="margin: 0 auto 22px; background-color: #8d7a64;"></div>
+            <p class="versiculo">
+                “Por esta niña oraba, y él me la concedió. Por eso ahora se la entrego, para que ella le sirva todos los días de su vida”.
+                <span class="versiculo-ref">1 Samuel 1:27-28</span>
+            </p>
+        </div>
+    </div>
+  <section class="seccion aparecer">
+        <img src="foto5.jpeg" alt="Doménica Erazo">
+    </section>
+    <!-- PADRES (como estaba originalmente) -->
     <div class="seccion-padres reveal" style="padding: 60px 30px; text-align: center; font-family: 'Cinzel', serif;">
         <div style="margin-bottom: 40px;">
             <p style="font-family: 'Cormorant Garamond', serif; font-size: 1rem; font-style: italic; color: #5d4936; line-height: 1.6; letter-spacing: 1px; margin-bottom: 20px;">
@@ -1779,9 +1866,7 @@
             </div>
         </div>
     </div>
-  <section class="seccion aparecer">
-        <img src="foto5.jpeg" alt="Doménica Erazo">
-    </section>
+  
     <!-- ITINERARIO -->
     <section class="seccion-itinerario">
         <h2 class="titulo-seccion">Itinerario</h2>
@@ -1794,7 +1879,7 @@
                 </div>
                 <div class="tl-icon"><img src="cere.png" alt=""></div>
             </div>
- <div class="tl-item aparecer">
+            <div class="tl-item aparecer">
                 <div class="tl-card">
                     <span class="tl-time">20:00 hs</span>
                     <p class="tl-desc">Brindis</p>
@@ -1817,34 +1902,41 @@
                 <div class="tl-icon"><img src="bail.png" alt=""></div>
             </div>
 
-          
         </div>
 
-        <p class="nota-protocolo">Agradecemos mucho su gentil puntualidad.</p>
+        <p class="nota-protocolo">Agradecemos mucho su gentil puntualidad </p>
     </section>
 
     <section class="seccion aparecer">
-        <img src="3.jpeg" alt="Doménica Erazo">
+        <img src="WhatsApp Image 2026-11-06 at 10.44.22 (5).jpeg" alt="Doménica Erazo">
     </section>
 
     <!-- REGALOS Y DRESS CODE -->
     <div class="seccion-regalos reveal">
 
-       <div class="tarjeta-regalo-cafe">
-    <img src="regalo.png" alt="Regalo" class="icon-regalo-line">
-    <h2 class="regalo-cursive-top" style="color: #ffffff;">Regalo</h2>
+        <div class="tarjeta-regalo-cafe">
+            <img src="regalo.png" alt="Regalo" class="icon-regalo-line">
+            <h2 class="regalo-cursive-top" style="color: #ffffff;">Regalo</h2>
 
-    <p style="color: #ffffff;">El mejor regalo es que nos acompañen en este día tan especial. Puedes dar un detalle mediante transferencia bancaria. Agradecemos su generosidad y apoyo.</p>
-    <p id="nota-regalo" style="display:none; color:#ffffff; font-size:.68rem; opacity:.8; margin-top:2px;">
-    Como muestra de cariño, sugerimos un aporte desde $50.
-</p>
+            <p style="color: #ffffff;">El mejor regalo es que nos acompañen en este día tan especial. Puedes dar un detalle mediante transferencia bancaria. Agradecemos su generosidad y apoyo.</p>
+            <p id="nota-regalo" style="display:none; color:#ffffff; font-size:.68rem; opacity:.8; margin-top:2px;">
+                Como muestra de cariño, sugerimos un aporte desde $50.
+            </p>
 
-    <h4 class="titulo-datos-white" style="color: #ffffff;">TRANSFERENCIA BANCARIA</h4>
-    <p class="dato" style="color: #ffffff;">Cuenta de Ahorros - Banco del Pacífico</p>
-    <p class="dato" style="color: #ffffff;">Número de Cuenta: <span style="color: #ffffff;">1067654975</span></p>
-    <p class="dato" style="color: #ffffff;">Titular: Doménica Erazo Lema</p>
-    <p class="dato" style="color: #ffffff;">Cédula: <span style="color: #ffffff;">0931991517</span></p>
-</div>
+            <h4 class="titulo-datos-white" style="color: #ffffff;">TRANSFERENCIA BANCARIA</h4>
+            <p class="dato" style="color: #ffffff;">Cuenta de Ahorros - Banco del Pacífico</p>
+            <p class="dato" style="color: #ffffff;">Número de Cuenta: <span style="color: #ffffff;">1067654975</span></p>
+            <p class="dato" style="color: #ffffff;">Titular: Doménica Erazo Lema</p>
+            <p class="dato" style="color: #ffffff;">Cédula: <span style="color: #ffffff;">0931991517</span></p>
+
+            <!-- NUEVO: Lluvia de sobres -->
+            <div class="lluvia-sobres">
+                <h2>Lluvia de sobres</h2>
+                
+                <p style="color: #ffffff;">Puedes entregar tu detalle en un sobre el día de la celebración. Gracias por tu cariño.</p>
+                <img src="image00.png" alt="Lluvia de sobres">
+            </div>
+        </div>
 
         <div class="tarjeta-dress-blanca reveal">
             <h3>Dress code</h3>
@@ -1865,6 +1957,23 @@
                 <p class="dress-txt">Traje formal con saco y corbata obligatorios.</p>
             </div>
 
+            <!-- NUEVO: colores a evitar -->
+            <div class="mini-linea"></div>
+
+            <div>
+                <p class="dress-sub">Colores a evitar</p>
+                <div class="swatches">
+                    <div class="color-swatch">
+                        <div class="color-circle borde" style="background:#bfe3f5;"></div>
+                        <span>Celeste</span>
+                    </div>
+                    <div class="color-swatch">
+                        <div class="color-circle borde" style="background:#ffffff;"></div>
+                        <span>Blanco</span>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 
@@ -1877,7 +1986,7 @@
             <div class="carrusel-contenedor">
                 <div id="carrusel-track">
                     <div class="foto-item" tabindex="0" role="button" aria-label="Ver foto 1 en pantalla completa">
-                        <img src="4.jpeg" alt="Foto 1" draggable="false">
+                        <img src="3.jpeg" alt="Foto 1" draggable="false">
                     </div>
                     <div class="foto-item" tabindex="0" role="button" aria-label="Ver foto 2 en pantalla completa">
                         <img src="1.jpeg" alt="Foto 2" draggable="false">
@@ -1889,7 +1998,7 @@
                         <img src="WhatsApp Image 2026-11-06 at 10.44.22 (4).jpeg" alt="Foto 4" draggable="false">
                     </div>
                     <div class="foto-item" tabindex="0" role="button" aria-label="Ver foto 5 en pantalla completa">
-                        <img src="WhatsApp Image 2026-11-06 at 10.44.22 (5).jpeg" alt="Foto 5" draggable="false">
+                        <img src="4.jpeg" alt="Foto 5" draggable="false">
                     </div>
                     <div class="foto-item" tabindex="0" role="button" aria-label="Ver foto 6 en pantalla completa">
                         <img src="WhatsApp Image 2026-11-06 at 10.44.22 (6).jpeg" alt="Foto 6" draggable="false">
@@ -1948,13 +2057,13 @@
             </div>
         </div>
 
-       <div class="confirmacion-texto">
-    <h2 style="color: #ffffff;">Confirmación de asistencia</h2>
-    <p style="color: #ffffff;">Para mi es indispensable contar con tu valiosa presencia. Agradezco confirmar tu asistencia lo antes posible.</p>
-    <div id="contenedor-confirmar">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeifyGSDOU7VLocpiqDVSkTY_jKTu2tTqwlInURJS1KM728uw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn-blanco-outline">Confirmar aquí</a>
-    </div>
-</div>
+        <div class="confirmacion-texto">
+            <h2 style="color: #ffffff;">Confirmación de asistencia</h2>
+            <p style="color: #ffffff;">Para mi es indispensable contar con tu valiosa presencia. Agradezco confirmar tu asistencia lo antes posible.</p>
+            <div id="contenedor-confirmar">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSeifyGSDOU7VLocpiqDVSkTY_jKTu2tTqwlInURJS1KM728uw/viewform?usp=publish-editor" target="_blank" rel="noopener" class="btn-blanco-outline">Confirmar aquí</a>
+            </div>
+        </div>
     </div>
 
     <section class="seccion aparecer" style="display: flex; justify-content: center;">
@@ -1962,12 +2071,12 @@
     </section>
 
     <!-- FINAL -->
- <div class="seccion-final reveal">
-    <div class="divisor-elegante"></div>
-    <p class="texto-final" style="color: #ffffff;">Te espero</p>
-    <h2 class="firmas-final" style="color: #ffffff;">Doménica Erazo</h2>
-    <p class="agradecimiento" style="color: #ffffff;">¡Gracias por formar parte de mi historia!</p>
-</div>
+    <div class="seccion-final reveal">
+        <div class="divisor-elegante"></div>
+        <p class="texto-final" style="color: #ffffff;">Te espero</p>
+        <h2 class="firmas-final" style="color: #ffffff;">Doménica Erazo</h2>
+        <p class="agradecimiento" style="color: #ffffff;">¡Gracias por formar parte de mi historia!</p>
+    </div>
 
     <a href="https://wa.me/593960934663" target="_blank" rel="noopener" class="mi-enlace">&copy; Páginas Web Loja</a>
 
@@ -2021,7 +2130,7 @@
                 }, { once: true });
             }
 
-            /* ---------- CONTADOR (23 de enero de 2027, 18:00 hora de Ecuador) ---------- */
+            /* ---------- CONTADOR (23 de enero de 2027, 19:00 hora de Ecuador) ---------- */
             var fechaEvento = new Date('2027-01-23T19:00:00-05:00').getTime();
 
             function dos(n) { return n < 10 ? '0' + n : String(n); }
@@ -2060,32 +2169,32 @@
                 animables.forEach(mostrar);
             }
 
-          /* ---------- DATOS DEL INVITADO (?invitado=Nombre&pases=2) ---------- */
-var urlDatos = new URLSearchParams(window.location.search);
-var nombre = urlDatos.get('invitado');
-var cantidad = urlDatos.get('pases');
+            /* ---------- DATOS DEL INVITADO (?invitado=Nombre&pases=2) ---------- */
+            var urlDatos = new URLSearchParams(window.location.search);
+            var nombre = urlDatos.get('invitado');
+            var cantidad = urlDatos.get('pases');
 
-function limpiarTexto(t) {
-    t = t.replace(/\+/g, ' ');
-    // Decodifica hasta 2 veces por si el enlace llega doblemente codificado
-    for (var i = 0; i < 2; i++) {
-        try {
-            var d = decodeURIComponent(t);
-            if (d === t) break;
-            t = d;
-        } catch (e) { break; }
-    }
-    // Limpia cualquier %20 que haya quedado y espacios sobrantes
-    return t.replace(/%20/gi, ' ').replace(/\s+/g, ' ').trim();
-}
+            function limpiarTexto(t) {
+                t = t.replace(/\+/g, ' ');
+                // Decodifica hasta 2 veces por si el enlace llega doblemente codificado
+                for (var i = 0; i < 2; i++) {
+                    try {
+                        var d = decodeURIComponent(t);
+                        if (d === t) break;
+                        t = d;
+                    } catch (e) { break; }
+                }
+                // Limpia cualquier %20 que haya quedado y espacios sobrantes
+                return t.replace(/%20/gi, ' ').replace(/\s+/g, ' ').trim();
+            }
 
-if (nombre) {
-    document.getElementById('nombre-invitado').textContent = limpiarTexto(nombre);
-}
+            if (nombre) {
+                document.getElementById('nombre-invitado').textContent = limpiarTexto(nombre);
+            }
 
-if (cantidad) {
-    document.getElementById('num-pases').textContent = limpiarTexto(cantidad);
-}
+            if (cantidad) {
+                document.getElementById('num-pases').textContent = limpiarTexto(cantidad);
+            }
 
             /* ---------- CARRUSEL AUTOMÁTICO + ARRASTRE ---------- */
             var wrapper = document.querySelector('.carrusel-wrapper');
@@ -2316,31 +2425,31 @@ if (cantidad) {
             lb.addEventListener('touchmove', function (e) { e.preventDefault(); }, { passive: false });
         })();
 
+        const fotosInicio = document.querySelectorAll('.foto-carrusel-inicio');
 
-const fotosInicio = document.querySelectorAll('.foto-carrusel-inicio');
+        let indiceFotoInicio = 0;
 
-let indiceFotoInicio = 0;
+        if (fotosInicio.length > 1) {
 
-if (fotosInicio.length > 1) {
+            fotosInicio.forEach(foto => {
+                foto.loading = 'eager';
+            });
 
-    fotosInicio.forEach(foto => {
-        foto.loading = 'eager';
-    });
+            setInterval(() => {
 
-    setInterval(() => {
+                fotosInicio[indiceFotoInicio].classList.remove('activa');
 
-        fotosInicio[indiceFotoInicio].classList.remove('activa');
+                indiceFotoInicio = (indiceFotoInicio + 1) % fotosInicio.length;
 
-        indiceFotoInicio = (indiceFotoInicio + 1) % fotosInicio.length;
+                fotosInicio[indiceFotoInicio].classList.add('activa');
 
-        fotosInicio[indiceFotoInicio].classList.add('activa');
-
-    }, 2000);
-}
-var regalo = (urlDatos.get('regalo') || '').toLowerCase().trim();
-if (regalo === 's') {
-    document.getElementById('nota-regalo').style.display = 'block';
-}
+            }, 2000);
+        }
+        var urlParams2 = new URLSearchParams(window.location.search);
+        var regalo = (urlParams2.get('regalo') || '').toLowerCase().trim();
+        if (regalo === 's') {
+            document.getElementById('nota-regalo').style.display = 'block';
+        }
     </script>
 </body>
 
