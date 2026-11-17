@@ -1960,7 +1960,15 @@
         animation: none !important;
     }
 }
+/* Evitar que la invitación aparezca antes de abrir */
+body:not(.invitacion-abierta) > *:not(#preloader):not(#splash-foto):not(script) {
+    visibility: hidden;
+}
 
+/* Mostrar la invitación únicamente después del splash */
+body.invitacion-abierta > * {
+    visibility: visible;
+}
     </style>
 </head>
 
@@ -2414,11 +2422,16 @@ window.scrollTo(0, 0);
                     }
 
                     // 3) A los 2 segundos se oculta la foto y aparece la invitación
-                   setTimeout(function () {
+               setTimeout(function () {
     splash.classList.remove('show');
     splash.classList.remove('xv-go');
     splash.setAttribute('aria-hidden', 'true');
+
     document.documentElement.classList.remove('splash-open');
+
+    // Mostrar la invitación después de la transición
+    document.body.classList.add('invitacion-abierta');
+
     window.scrollTo(0, 0);
 }, DURACION_SPLASH);
                 }, { once: true });
